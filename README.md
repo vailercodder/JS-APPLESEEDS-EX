@@ -11,9 +11,6 @@ The repository is organized as follows:
 - `basics/` - Basic syntax and operations
 - `functions/` - Function definitions and expressions
 - `asynchronous/` - Exercises on asynchronous JavaScript (Promises, async/await)
-- `DOM/` - Document Object Model manipulations
-- `APIs/` - Using JavaScript to interact with web APIs
-
 ## How to Use
 
 To run these exercises, you will need:
@@ -25,7 +22,7 @@ To run these exercises, you will need:
 
 1. Clone this repository to your local machine.
 2. Navigate to the subfolder containing the exercise you want to run.
-3. Open the `.html` file associated with the exercise in your web browser to see the script in action.
+
 
 ## Contributing
 
