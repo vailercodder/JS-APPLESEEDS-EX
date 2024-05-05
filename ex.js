@@ -10,6 +10,7 @@ function boolToWord(bool) {
 //ex 2.1 lowest sum of the 2
 
 function lowestSum(array) {
+  // CR - There is a mistake in the variable name in sort function. It should be 'array' not 'numbers'.
   numbers.sort((a, b) => a - b);
 
   return numbers[0] + numbers[1];
@@ -23,7 +24,7 @@ function binaryArrayNumber(arr) {
 }
 
 //ex 2.4
-
+// CR - A more efficient approach using frequency map could reduce the complexity
 function findUniq(arr) {
   let majority;
   if (arr[0] === arr[1]) {
@@ -42,6 +43,28 @@ function findUniq(arr) {
     }
   }
 }
+
+// CR - This function efficiently finds the unique number in an array using a frequency map.
+function findUniq2(arr) {
+  const frequency = {};
+
+  // Build the frequency map
+  arr.forEach(num => {
+    frequency[num] = (frequency[num] || 0) + 1;
+  });
+
+  // Find and return the unique number by searching for a frequency of 1
+  for (const num in frequency) {
+    if (frequency[num] === 1) {
+      return Number(num); // Convert the property key back to a number
+    }
+  }
+}
+
+// Usage Example
+console.log(findUniq2([1, 1, 1, 2, 1, 1])); // Output: 2
+console.log(findUniq2([0, 0, 0.55, 0, 0])); // Output: 0.55
+
 
 //ex 2.5
 
